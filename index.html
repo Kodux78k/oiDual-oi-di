@@ -4,11 +4,34 @@
 <meta charset="UTF-8">
 <title>Multi Iframe Stack</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- PWA METADATA & VIEWPORT FIX -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#0f0f11">
 
+<!-- iOS Support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="./icon-192.png">
+
+<!-- Manifest -->
+<link rel="manifest" href="./manifest.json">
+
+<!-- CSS Safe Area Fix -->
+<style>
+ 
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+</style>
 <style>
   html, body {
     margin: 0;
-    padding: 0;
+    padding: 10;
     height: 100%;
     background: #000;
     overflow: auto;
